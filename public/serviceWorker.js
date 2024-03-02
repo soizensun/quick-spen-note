@@ -24,23 +24,6 @@ self.addEventListener("fetch", (event) => {
     );
 });
 
-// self.addEventListener('fetch', function (event) {
-//     event.respondWith(
-//         caches.match(event.request)
-//             .then(function (response) {
-//                 // Cache hit - return response
-//                 console.log(response)
-//                 if (response) {
-//                     return response;
-//                 }
-//                 const res = fetch(event.request)
-//                 res.then((r) => console.log("r => ", r))
-//                 return fetch(event.request);
-//             }
-//             )
-//     );
-// });
-
 // activate the service worker
 self.addEventListener("activate", (event) => {
     const cacheWhitelist = [];
